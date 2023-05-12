@@ -1,0 +1,14 @@
+﻿[
+    {
+        "Username": "alice",
+        "PasswordHash": "yl96JK/TY1gOy2BJquD1hHf9XZUpzvZ8W0UwJ6UjPWE="
+    },
+    {
+        "Username": "bob",
+        "PasswordHash": "vT8dsgWwU6nELUixV3YvZW8n6WuN6xGji7VpMvCmrZE="
+    },
+    {
+        "Username": "charlie",
+        "PasswordHash": "o4zBoG4HbZmu1JgQ2NSOeS0tgm5pYdD8oFJbGGIvnZM="
+    }
+]

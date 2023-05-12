@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:shapes="clr-namespace:Microsoft.Maui.Controls.Shapes;assembly=Microsoft.Maui.Controls"
+
+             x:Class="MauiApp3.View.HomePage"
+             Title="Home">
+
+    <StackLayout>
+
+
+        <Label Text="Playlist" FontSize="Large" FontAttributes="Bold" />
+        <ListView x:Name="MyListView"  ItemSelected="OnItemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Vertical">
+                            <Label Text="{Binding AudioName}" FontSize="Medium" />
+                            <Label Text="{Binding AudioDescription}" FontSize="Small" />
+
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Previous"  Clicked="Previous_Button_Clicked"></Button>
+            <Button Text="Pause-play"  Clicked="Pause_play_Button_Clicked"></Button>
+            <Button Text="Next"  Clicked="Next_Button_Clicked"></Button>
+        </StackLayout>
+
+        
+    </StackLayout>
+
+</ContentPage>

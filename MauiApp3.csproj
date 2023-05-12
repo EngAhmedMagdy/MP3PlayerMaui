@@ -1,0 +1,91 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  
+  <PropertyGroup>
+    <TargetFrameworks>net6.0-android;net6.0-ios;net6.0-maccatalyst</TargetFrameworks>
+    <TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net6.0-windows10.0.19041.0</TargetFrameworks>
+    <!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
+    <!-- <TargetFrameworks>$(TargetFrameworks);net6.0-tizen</TargetFrameworks> -->
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MauiApp1</RootNamespace>
+    <UseMaui>true</UseMaui>
+    <SingleProject>true</SingleProject>
+    <ImplicitUsings>enable</ImplicitUsings>
+
+    <!-- Display name -->
+    <ApplicationTitle>MauiApp1</ApplicationTitle>
+
+    <!-- App Identifier -->
+    <ApplicationId>com.companyname.mauiapp1</ApplicationId>
+    <ApplicationIdGuid>4139941C-C12F-46E7-8A5D-47C008302010</ApplicationIdGuid>
+
+    <!-- Versions -->
+    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <ApplicationVersion>1</ApplicationVersion>
+
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">14.2</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'maccatalyst'">14.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
+    <TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+</PropertyGroup>
+
+	<ItemGroup>
+		<!-- App Icon -->
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />		<!-- Splash Screen -->
+		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+
+		<!-- Images -->
+		<MauiImage Include="Resources\Images\*" />
+		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+
+		<!-- Custom Fonts -->
+		<MauiFont Include="Resources\Fonts\*" />
+
+		<!-- Raw Assets (also remove the "Resources\Raw" prefix) -->
+		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Remove="Resources\Raw\ATB x Topic X A7S - Your Love (9PM).mp3" />
+	  <None Remove="Resources\Raw\audioData.json" />
+	  <None Remove="Resources\Raw\Craig David-Insomnia.mp3" />
+	  <None Remove="Resources\Raw\Dont Wake Me Up [WikiSeda].mp3" />
+	  <None Remove="Resources\Raw\Ed Sheeran &amp;amp Justin Bieber - I Don&amp;#39t Care (Lyric Video).mp3" />
+	  <None Remove="Resources\Raw\Eminem - Till I Collapse [HD].mp3" />
+	  <None Remove="Resources\Raw\Enrique Iglesias - Tonight (I'm Lovin' You) ft. Ludacris, DJ Frank E (128kbit_AAC).mp3" />
+	  <None Remove="Resources\Raw\Fat Joe, Remy Ma - All The Way Up ft. French Montana, Infared.mp3" />
+	  <None Remove="Resources\Raw\Frozen Ground (ABGT309) (Cosmic Gate Remix).mp3" />
+	  <None Remove="Resources\Raw\G-Eazy-No Limit.mp3" />
+	  <None Remove="Resources\Raw\Maluma;Ricky Martin-Vente Pa' Ca.mp3" />
+	  <None Remove="Resources\Raw\users.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Plugin.LocalNotification" Version="10.1.4" />
+	  <PackageReference Include="Plugin.Maui.Audio" Version="1.0.0" />
+	  <PackageReference Include="Plugin.MauiAudio" Version="1.2.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="View\LoginPage.xaml.cs">
+	    <DependentUpon>LoginPage.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="View\HomePage.xaml.cs">
+	    <DependentUpon>HomePage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="View\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\HomePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\Player.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
+</Project>

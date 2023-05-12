@@ -1,0 +1,35 @@
+{
+  "version": 2,
+  "dgSpecHash": "BXqICD5xfG1wtJrQOffgYyZ28LGY57jbXvoEwgndltW/AoBe4j+LfV2YoWulofHumed33V19vbJHEZ4fLY1CHQ==",
+  "success": false,
+  "projectFilePath": "F:\\source\\repos\\MauiApp2\\MauiApp3\\MauiApp3.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ahmed magdy\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.27\\microsoft.windows.sdk.net.ref.10.0.19041.27.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.NETCore.App.Runtime.win-x86' from remote source 'https://api.nuget.org/v3-flatcontainer/microsoft.netcore.app.runtime.win-x86/index.json'.",
+      "libraryId": "Microsoft.NETCore.App.Runtime.win-x86"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.AspNetCore.App.Runtime.win-x86' from remote source 'https://api.nuget.org/v3-flatcontainer/microsoft.aspnetcore.app.runtime.win-x86/index.json'.",
+      "libraryId": "Microsoft.AspNetCore.App.Runtime.win-x86"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.NETCore.App.Runtime.Mono.win-x86' from remote source 'https://api.nuget.org/v3-flatcontainer/microsoft.netcore.app.runtime.mono.win-x86/index.json'.",
+      "libraryId": "Microsoft.NETCore.App.Runtime.Mono.win-x86"
+    },
+    {
+      "code": "NU1301",
+      "level": "Error",
+      "message": "Failed to retrieve information about 'Microsoft.WindowsDesktop.App.Runtime.win-x86' from remote source 'https://api.nuget.org/v3-flatcontainer/microsoft.windowsdesktop.app.runtime.win-x86/index.json'.",
+      "libraryId": "Microsoft.WindowsDesktop.App.Runtime.win-x86"
+    }
+  ]
+}

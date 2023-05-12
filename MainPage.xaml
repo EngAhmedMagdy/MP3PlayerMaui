@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp3.MainPage">
+
+    <StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Username:" VerticalTextAlignment="Center" Margin="5,5,5,0"/>
+            <Entry x:Name="NameLabel" Placeholder="Enter your username" FontAttributes="Bold" FontSize="Medium" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Passward:" VerticalTextAlignment="Center" Margin="5,5,5,0"/>
+            <Entry x:Name="PasswardLabel" Placeholder="Enter your passward" FontAttributes="Bold" FontSize="Medium" VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="login" Clicked="OnLogin" Margin="10,10,5,5" />
+            <Button Text="register" Clicked="OnRegister" Margin="10, 10,5,5" />
+
+        </StackLayout>
+        <Label x:Name="successful" Text="Successful!" TextColor="Green" IsVisible="false" Margin="10,0,5,5" />
+        <Label x:Name="fail" Text="Faild!" TextColor="Red" IsVisible="false" Margin="10,0,5,5" />
+
+    </StackLayout>
+</ContentPage>
